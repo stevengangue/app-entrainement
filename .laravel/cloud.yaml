@@ -1,0 +1,18 @@
+name: app-entrainement
+php: '8.4'
+
+database:
+  mysql: true
+
+build:
+  - composer install --no-interaction --optimize-autoloader
+
+hooks:
+  build: |
+    echo "Building Laravel application..."
+    php artisan optimize
+  deploy: |
+    php artisan migrate --force
+    php artisan config:cache
+    php artisan route:cache
+    php artisan view:cache
