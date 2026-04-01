@@ -6,11 +6,9 @@ database:
 
 build:
   - composer install --no-interaction --optimize-autoloader
+  - php artisan optimize
 
 hooks:
-  build: |
-    echo "Building Laravel application..."
-    php artisan optimize
   deploy: |
     php artisan migrate --force
     php artisan config:cache

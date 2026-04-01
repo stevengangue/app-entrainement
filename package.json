@@ -1,9 +1,0 @@
-@'
-{
-    "private": true,
-    "scripts": {
-        "dev": "echo \"Skipping frontend build\"",
-        "build": "echo \"Skipping frontend build\""
-    }
-}
-'@ | Out-File -FilePath package.json -Encoding utf8
