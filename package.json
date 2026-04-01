@@ -1,0 +1,10 @@
+{
+    "name": "app-entrainement",
+    "private": true,
+    "version": "1.0.0",
+    "scripts": {
+        "build": "echo 'No frontend build'"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}
