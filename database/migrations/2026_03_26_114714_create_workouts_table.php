@@ -8,14 +8,9 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('workout_exercise', function (Blueprint $table) {
+        Schema::create('workouts', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('workout_id')->constrained()->onDelete('cascade');
-            $table->foreignId('exercise_id')->constrained()->onDelete('cascade');
-            $table->integer('sets')->default(3);
-            $table->integer('reps')->default(10);
-            $table->integer('rest_time_seconds')->default(60);
-            $table->integer('order_number')->default(0);
+            $table->string('name');
             $table->timestamps();
         });
     }
