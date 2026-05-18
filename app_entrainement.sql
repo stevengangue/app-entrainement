@@ -415,11 +415,7 @@ CREATE TABLE `workouts` (
 -- Structure de la table `workout_exercise`
 --
 
-CREATE TABLE `workout_exercise` (
-  `id` bigint(20) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 --
 -- Index pour les tables exportées
